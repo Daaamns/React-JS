@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css'
 import PokemonCard from "./components.1/PokemonCard";
 import { useState } from "react";
 
@@ -46,7 +46,7 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemonNewList} />
-      {pokemonIndex < pokemonList.length > 0 ? (
+      {pokemonIndex > 0 ? (
         <button onClick={handleClickPrev}>précédent</button>
       ) : (
         <p></p>
