@@ -26,8 +26,8 @@ function PokemonCard(props) {
 PokemonCard.propTypes = {
     pokemon: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        imgSrc: PropTypes.string.isRequired
+        imgSrc: PropTypes.string,
     }).isRequired
 }
   
-export default PokemonCard;
+export default PokemonCard;1
