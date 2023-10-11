@@ -1,13 +1,10 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 import PokemonCard from "./components.1/PokemonCard";
 import { useState } from "react";
 import ButtonNavBar from "./components.1/NavBar";
-
-
-
 
 function App() {
   const pokemonList = [
@@ -35,25 +32,22 @@ function App() {
       name: "mew",
     },
   ];
-  
+
   const [pokemonIndex, indexOfPokemon] = useState(0);
   const pokemonNewList = pokemonList[pokemonIndex];
 
-  const handleClickNext = () => {
-    indexOfPokemon(pokemonIndex + 1);
+  const handleClick = (pokemonIndex) => {
+    indexOfPokemon(pokemonIndex);
   };
-  
-  const handleClickPrev = () => {
-    indexOfPokemon(pokemonIndex - 1);
-  };
+
   return (
     <div>
       <PokemonCard pokemon={pokemonNewList} />
-      <ButtonNavBar 
-      handleClickNext={handleClickNext}
-      handleClickPrev={handleClickPrev}
-      pokemonIndex={pokemonIndex}
-      pokemonList={pokemonList}
+      <ButtonNavBar
+        handleClick={handleClick}
+        pokemonIndex={pokemonIndex}
+        pokemonList={pokemonList}
+        pokemon={pokemonNewList}
       />
     </div>
   );

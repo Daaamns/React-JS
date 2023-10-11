@@ -1,12 +1,20 @@
-const ButtonNavBar = ({
-  handleClickNext,
-  handleClickPrev,
-  pokemonIndex,
-  pokemonList,
-}) => {
+import { useState } from "react";
+
+const ButtonNavBar = ({ handleClick, pokemonList }) => {
   return (
     <>
-      {pokemonIndex > 0 ? (
+      {pokemonList.map((pokemon, pokemonIndex) => {
+        return (
+          <button key={pokemonIndex} onClick={ () => handleClick(pokemonIndex)}>
+            {pokemon.name}
+          </button>
+        );
+      })}
+    </>
+  );
+};
+{
+  /* {pokemonIndex > 0 ? (
         <button onClick={handleClickPrev}>précédent</button>
       ) : (
         <p></p>
@@ -15,9 +23,7 @@ const ButtonNavBar = ({
         <button onClick={handleClickNext}>suivant</button>
       ) : (
         <p></p>
-      )}
-    </>
-  );
-};
+      )} */
+}
 
 export default ButtonNavBar;
