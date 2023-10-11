@@ -30,4 +30,4 @@ PokemonCard.propTypes = {
     }).isRequired
 }
   
-export default PokemonCard;1
+export default PokemonCard;
