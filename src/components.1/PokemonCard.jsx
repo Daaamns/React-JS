@@ -22,7 +22,8 @@ function PokemonCard(props) {
     }
     <figcaption>{props.pokemon.name}</figcaption>
     </figure>;
-  });
+ ) 
+}
 
 PokemonCard.propTypes = {
     pokemon: PropTypes.shape({
