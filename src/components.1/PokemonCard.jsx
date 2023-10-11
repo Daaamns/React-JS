@@ -7,4 +7,4 @@ function PokemonCard() {
     )
 }
 
-export default App;
+export default PokemonCard;
