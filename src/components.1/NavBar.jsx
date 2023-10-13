@@ -1,14 +1,17 @@
 import { useState } from "react";
 
+// const [index, setindex] = useState("");
+// {pokemon.name === "pikachu" ? alert("pikapika") : ""}
+
 const ButtonNavBar = ({ handleClick, pokemonList }) => {
   return (
     <>
       {pokemonList.map((pokemon, pokemonIndex) => {
-        return (
+          return (
           <button key={pokemonIndex} onClick={ () => handleClick(pokemonIndex)}>
-            {pokemon.name}
+            {pokemon.name} 
           </button>
-        );
+          )
       })}
     </>
   );
@@ -21,7 +24,7 @@ const ButtonNavBar = ({ handleClick, pokemonList }) => {
       )}
       {pokemonIndex < pokemonList.length - 1 ? (
         <button onClick={handleClickNext}>suivant</button>
-      ) : (
+      ) : ( 
         <p></p>
       )} */
 }
