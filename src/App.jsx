@@ -45,7 +45,10 @@ function App() {
   const handleClick = (pokemonIndex) => {
     indexOfPokemon(pokemonIndex);
     {(pokemonList[pokemonIndex].name === "pikachu") ?
-    alert("pika pika") : null }
+    setTimeout(() => {
+      alert("pika pika");
+    }, 500) : null
+   }
   };
 
   return (
